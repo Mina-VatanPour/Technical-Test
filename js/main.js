@@ -34,19 +34,13 @@ function scaleAndCompare(myString2) {
 
     for (let i = 0; i <= myString2ConvertToArray.length - 1; i++) {
 
-        if (newArray !== []) {
+        if (myString2ConvertToArray[i] !== newArray[newArray.length - 1]) {
 
-            if (myString2ConvertToArray[i] !== newArray[newArray.length - 1]) {
-                newArray.push(myString2ConvertToArray[i])
-
-            } else {
-                newArray.pop()
-                counter++
-                newArray.push(myString2ConvertToArray[i])
-            }
-            continue
+            newArray.push(myString2ConvertToArray[i])
+        } else {
+            counter++
         }
-        i++;
+
     }
 
     newStr = newArray.join('')
