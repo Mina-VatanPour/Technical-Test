@@ -50,3 +50,31 @@ function scaleAndCompare(myString2) {
 }
 
 // Question 3 **********************************************************************************************************
+function swapArray(myArray) {
+
+    // 1- پیدا کردن بزرگترین عدد در آرایه و ایندکس آن
+    let maxNumberInArr = Math.max(...myArray);
+    let placeOfMaxNum =myArray.indexOf(maxNumberInArr)
+    console.log(maxNumberInArr)
+    console.log(placeOfMaxNum)
+    // 2- پیدا کردن خانه وسط آرایه
+    // let middleArray = Math.round((myArray.length - 1) / 2);
+    // 3- جابجا کردن بزرگترین عدد با عددی که در خانه وسط آرایه قرار دارد
+    // swapArray(myArray[middleArray], maxNumberInArr)
+    // 4- طبق الگوریتم مرتب سازی حبابی ادامه میدیم :
+    let counter = 0;
+
+    for (let i = 0; i < myArray.length; i++) {
+
+        if (myArray[i] > myArray[i + 1]) {
+            let sort = myArray[i]
+            myArray[i] = myArray[i + 1]
+            myArray[i + 1] = sort
+            counter++;
+        }
+    }
+
+    let sortedArray = myArray.join(',')
+    document.getElementById('my-array-sorted').value = '[ ' + sortedArray + ' ]';
+    document.getElementById('min-swap').value = counter;
+}

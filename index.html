@@ -63,7 +63,8 @@
                 <div class="row mt-5">
                     <div class="row d-flex my-2">
                         <label class="col-12 text-danger mb-2 fw-bold"> New string :</label>
-                        <input id="new-string2" class="col-12 input-group-lg mb-2 fw-bold p-2 rounded bg-light" readonly>
+                        <input id="new-string2" class="col-12 input-group-lg mb-2 fw-bold p-2 rounded bg-light"
+                               readonly>
                     </div>
                     <div class="row d-flex my-2">
                         <label class="col-12 text-danger mb-2 fw-bold">Minimum character removed :</label>
@@ -75,7 +76,34 @@
         </div>
 
         <!--Question 3 **********************************************************************************************-->
+        <div id="answer3" class="col-12 col-md-4 mx-2">
+            <label class="fw-bold text-danger border-bottom"> Answer to question 3 </label>
+            <div class="content">
+                <form method="post" class="container">
+                    <div class="row my-3">
+                        <label class="col-12 mb-2"> Enter elements of array :</label>
+                        <input type="text" id="myString3" class="form-control my-2" placeholder="example : number1,number2,...">
+                    </div>
 
+                    <button type="button" class="btn btn-outline-danger"
+                            onclick="swapArray(document.getElementById('myString3').value.split(','))">Sorting Array
+                    </button>
+                </form>
+                <hr class="mt-4">
+                <!--  result   -->
+                <div class="row mt-5">
+                    <div class="row d-flex my-2">
+                        <label class="col-12 text-danger mb-2 fw-bold"> Sorted array :</label>
+                        <input id="my-array-sorted" class="col-12 mb-2 fw-bold p-2 rounded bg-light" readonly>
+                    </div>
+                    <div class="row d-flex my-2">
+                        <label class="col-12 text-danger mb-2 fw-bold">Minimum number of Swap : </label>
+                        <input id="min-swap" class="col-12 mb-2 fw-bold p-2 rounded bg-light" readonly>
+                    </div>
+
+                </div>
+            </div>
+        </div>
 
     </div>
 </div>
